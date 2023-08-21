@@ -1,0 +1,79 @@
+Name: Koushal S Modi
+CS 110
+Project 1 
+
+For each problem that requires a written answer, write (or copy-and-paste)
+your answers in this file. When you are done, you should have replaced all
+the ellipses (the three dots) with your answers.
+
+At the end, you will turn in this file along with your modified
+dna_analysis.py program.
+
+Part 1a:
+
+(No answers in this section.)
+
+Part 1b:
+
+Problem Number: 1b
+GC-content: 0.6468641125240355
+
+Part 2a:
+
+GC-content: 0.430599870611
+AT-content: 0.569400129389
+
+
+Part 2b:
+
+Problem Number: 2b
+GC-content: 0.45105133333333336
+AT-content: 0.548112925925926
+G count:  6103168
+C count:  6075218
+A count:  7467696
+T count:  7331353
+
+
+Part 2c:
+
+Sum count:  39840
+Total count: 40000
+seq length:  40000
+
+
+Explanation:
+For test-high-gc-1.fastq, the sum received was 39840 while for the  total_count and length of sequence, the answer obtained was 40000.
+
+Write at least one paragraph describing how you approach this detective work 
+
+When approaching the detective work of comparing the metrics for the .fastq files, the first step is to understand the code and its logic. 
+By examining the code, I identified the different variables and calculations involved in computing the metrics. 
+This helped me in understanding how the individual counts, total_count, and seq length are derived and how they relate to each other.
+To identify the differences between the metrics, I then compared their values for each file. 
+By comparing the sum of individual counts, total_count, and seq length, I determined whether they are equal or different.
+
+
+Write at least one paragraph to explain the differences 
+
+The differences between the sum of individual counts and the total_count/seq length metrics can occur due to various factors. 
+Firstly,  the presence of characters other than A, C, G, and T in the sequence, which are counted in total_count/seq length but not in the individual counts. 
+Variations in the way the sequence is represented, such as line breaks or whitespace characters, which may affect the length calculation but not the individual counts. 
+Potential errors or inconsistencies in the input file, such as missing or extra characters, which can affect the total_count/seq length but not the individual counts if they are not A, C, G, or T.
+
+
+Write at least one paragraph which total(s) can be used to calculate GC content and which total(s) cannot.
+
+For calculating the GC content, the sum of individual counts of G and C can be used as the numerator, and the sum of A, C, G and T can be used as denominator. Since it will cover up for any input file formatting as it will contain only valid nucleotide characters to obtain accurate results.
+
+We should not calculate the GC content, using either the total_count or the length of the sequence (len(seq)) as the denominator as it may contain line breaks, whitespaces, or extra characters.
+
+
+Part 2d:
+
+AT/GC Ratio: 1.87476947174
+
+Part 2e:
+GC content: moderate GC content
+
+
